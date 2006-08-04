@@ -1,0 +1,119 @@
+// !$*UTF8*$!
+{
+	2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeBuildStyle = 4A9504D0FFE6A4CB11CA0CBA /* Development */;
+		activeExecutable = 75EAB10C0A747FDB00FC55CC /* MovaX */;
+		activeTarget = 8D15AC270486D014006FF6A4 /* MovaX */;
+		addToTargets = (
+			8D15AC270486D014006FF6A4 /* MovaX */,
+		);
+		codeSenseManager = 75EAB1250A747FE200FC55CC /* Code sense */;
+		executables = (
+			75EAB10C0A747FDB00FC55CC /* MovaX */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					219,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 176357463;
+			PBXWorkspaceStateSaveDate = 176357463;
+		};
+		sourceControlManager = 75EAB1240A747FE200FC55CC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	75EAB10C0A747FDB00FC55CC /* MovaX */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MovaX;
+		sourceDirectories = (
+		);
+	};
+	75EAB1240A747FE200FC55CC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 1;
+		scmConfiguration = {
+			SubversionToolPath = /usr/local/subversion/bin/svn;
+		};
+		scmType = scm.subversion;
+	};
+	75EAB1250A747FE200FC55CC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	75EAB12C0A75D0C700FC55CC /* convert_koi_ipa_to_utf.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {960, 814}}";
+			sepNavSelRange = "{709, 0}";
+			sepNavVisRect = "{{0, 0}, {960, 814}}";
+			sepNavWindowFrame = "{{15, 104}, {999, 919}}";
+		};
+	};
+	8D15AC270486D014006FF6A4 /* MovaX */ = {
+		activeExec = 0;
+		executables = (
+			75EAB10C0A747FDB00FC55CC /* MovaX */,
+		);
+	};
+}
