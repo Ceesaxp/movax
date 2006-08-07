@@ -77,45 +77,33 @@ class IPAConvert
       "0xF3" => "0x030C", "0xF4" => "0x030C", "0xF5" => "0x0299", "0xF6" => "0x0268",
       "0xF7" => "0x0273", "0xF8" => "0x0272", "0xF9" => "0x02D0", "0xFA" => "0x0266",
       "0xFB" => "0x02A1", "0xFC" => "0x0291", "0xFD" => "0x029B", "0xFE" => "0x0255",
-      "0xFF" => "0x0288"
-    }
-    
-    # Some characters are digraphs
-    @silIpaDoublesUnicodeMap = {
+      "0xFF" => "0x0288",
+      # the following codes are digraphs
       "0x43" => "0x0063 0x0327", "0x80" => "0x02E9 0x02E7", "0x85" => "0x02E5 0x02E7", 
       "0x86" => "0x02E5 0x02E9", "0xD8" => "0x02E7 0x02E5", "0xD9" => "0x02E7 0x02E9", 
       "0xE8" => "0x02E9 0x02E5"
     }
   end
-  
-  public
-    def convert(s)
-      # Take SIL IPA93 encoded string and convert it to Unicode (UTF-8)
-      converted = []
-      len = 0
-      s.each_byte { |b|
+
+  def convert(s)
+    # Take SIL IPA93 encoded string and convert it to Unicode (UTF-8)
+    converted = []
+    len = 0
+    puts s
+    s.each_byte { |b|
+      hexCode = "0x%X" % b
+      @silIpaUnicodeMap[hexCode].split.each { |d|
+        converted << d.hex
         len += 1
-        hexCode = "0x%X" % b
-        begin
-          converted << @silIpaUnicodeMap[hexCode].hex
-        rescue NoMethodError
-          # catch digraphs
-          @silIpaDoublesUnicodeMap[hexCode].split.each { |d|
-            converted << d.hex
-          }
-          len += 1
-        end      
       }
-      puts s.size
-      puts len
-      return converted.pack("U" * len)
-    end
+    }
+    return converted.pack("U" * len)
+  end
 end
 
 def myTest
   ipa = IPAConvert.new
-  trans = ["[╚хk█m╚deItIN]","[╚гk█m╚хdeIS╚n]", "[Qkхsentju╚l]", "[гQkwIхzIS╚n]", "[хT╚ЫmIk]", "[De╚]"]
-  trans.each { |t|
+  $stdin.each { |t|
     puts ipa.convert(t)
   }
 end
